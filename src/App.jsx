@@ -8,6 +8,8 @@ import './App.css'
 import './index.css'
 import Dashboard from './pages/admin/Dashboard';
 import Users from './pages/admin/Users';
+import Categories from './pages/admin/Categories';
+import Tags from './pages/admin/Tags';
 
 // Protected Route component
 const ProtectedRoute = ({ children }) => {
@@ -78,8 +80,8 @@ function App() {
           />
           <Route path="/admin" element={<Dashboard />}>
             <Route path="users" element={<Users />} />
-            <Route path="tags" element={<div>Tags Page</div>} />
-            <Route path="categories" element={<div>Categories Page</div>} />
+            <Route path="categories" element={<Categories />} />
+            <Route path="tags" element={<Tags />} />
             <Route index element={<Users />} />
           </Route>
         </Routes>
