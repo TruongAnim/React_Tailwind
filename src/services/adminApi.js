@@ -45,4 +45,58 @@ export const userService = {
     },
 };
 
+export const categoryService = {
+    getAll: async () => {
+        const response = await adminApi.get('/categories');
+        return response.data;
+    },
+
+    getById: async (id) => {
+        const response = await adminApi.get(`/categories/${id}`);
+        return response.data;
+    },
+
+    create: async (data) => {
+        const response = await adminApi.post('/categories', data);
+        return response.data;
+    },
+
+    update: async (id, data) => {
+        const response = await adminApi.put(`/categories/${id}`, data);
+        return response.data;
+    },
+
+    delete: async (id) => {
+        const response = await adminApi.delete(`/categories/${id}`);
+        return response.data;
+    },
+};
+
+export const tagService = {
+    getAll: async () => {
+        const response = await adminApi.get('/tags');
+        return response.data;
+    },
+
+    getById: async (id) => {
+        const response = await adminApi.get(`/tags/${id}`);
+        return response.data;
+    },
+
+    create: async (data) => {
+        const response = await adminApi.post('/tags', data);
+        return response.data;
+    },
+
+    update: async (id, data) => {
+        const response = await adminApi.put(`/tags/${id}`, data);
+        return response.data;
+    },
+
+    delete: async (id) => {
+        const response = await adminApi.delete(`/tags/${id}`);
+        return response.data;
+    },
+};
+
 export default adminApi; 
